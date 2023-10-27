@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+</head>
+
+<body class="body">
+    <h3 id='getclass' style='display: none;'>Syntax</h3>
+    <div >
+        <section id="navigation_bar" style="position: fixed !important"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom" style="position: fixed !important"></section>
+    </div>
+    <div style="padding-top: 4rem">
+    <div id="mobile" >
+        <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+        <div id="listofitems_mobile1" style="padding:5%;"></div>
+    </div>
+
+    <div class="row " id="laptop" style="overflow: hidden;">
+        <div class="col-2  LeftSideIndex" id="listofitems_Laptop" style="overflow: hidden; overflow-y: scroll;"></div>
+        <div class="col-10  RightSideIndex" style="overflow: hidden; overflow-y: scroll;">
+            <div class="row">
+                <div class="col-10" id="listofitems_Laptop1" style="padding:5%;"></div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="content" style="display:none; ">
+        <h2>Some SQL Content</h2>
+        <br>
+        <div class=" d-flex justify-content-between">
+            <button type="button" class="btn  btn-success">
+                <i class='fas fa-arrow-left'></i> Previous </button>
+            <button type="button" class="btn btn-success">&nbsp;&nbsp;&nbsp; Next <i
+                    class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+        </div>
+        <br>
+        <!--start with your content-->
+        <div>
+            <br>
+            <br>
+            <p>This detailed overview provides insight into the key milestones and developments in the Oracle Database
+                supports a wide range of data types to store various types of data efficiently. Here is a detailed list
+                of Oracle data types:</p>
+            <br>
+            <p>
+                <b>1. NUMBER:</b> Stores fixed or floating-point numbers. You can specify precision and scale.
+            </p>
+            <p>
+                <b>2. BINARY_FLOAT:</b> Single-precision floating-point numbers.
+            </p>
+            <p>
+                <b>3. BINARY_DOUBLE:</b> Double-precision floating-point numbers.
+            </p>
+            <p>
+                <b>10. NCLOB:</b> National Character Large Objects for storing large national character data.
+            </p>
+            <div class="square-image">
+                <img src="Images/SQLCOMMANDS.png" alt="some sql image">
+          </div>
+            <p>Each of these data types serves a specific purpose, allowing you to store and manipulate data in various
+                ways within an Oracle database. The choice of data type depends on the nature of the data you need to
+                store and the operations you want to perform on that data.</p>
+            <p>SQL joins are used to combine rows from two or more tables based on a related column between them. There
+                are several types of SQL joins, including INNER JOIN, LEFT JOIN (or LEFT OUTER JOIN), RIGHT JOIN (or
+                RIGHT OUTER JOIN), and FULL JOIN (or FULL OUTER JOIN). I'll provide examples of each type of join along
+                with tables and queries to illustrate their use.</p>
+            <p>Let's consider two simple tables:</p>
+            <p>
+                <b>Table:</b>employees
+            </p>
+            <table border="2" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                <thead class='table-secondary'>
+                    <tr style="text-align: left;">
+                        <th>ID</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John</td>
+                        <td>Doe</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane</td>
+                        <td>Smith</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bob</td>
+                        <td>Johnson</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            
+            <p>
+                <b>4. FULL JOIN:</b>
+            </p>
+            <ul></ul>
+            <br>
+            <div class="code-container"><span><i class="left-copy-btn">Example:</i></span>
+                <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i> Copy </span>
+                <pre class="side_border"><code class="language-sql"> SELECT employees.FirstName, employees.LastName, departments.Department 
+ FROM 
+ employees FULL JOIN departments 
+ ON employees.ID = departments.ID;</code></pre>
+            </div>
+            <br>
+            <p>
+                <b>4. INTEGER:</b> Whole numbers with a range of -2,147,483,648 to 2,147,483,647.
+            </p>
+            <p>
+                <b>5. CHAR:</b> Fixed-length character strings.
+            </p>
+            <p>
+                <b>6. VARCHAR2:</b> Variable-length character strings with a maximum length.
+            </p>
+            <p>
+                <b>7. NCHAR:</b> Fixed-length national character set strings.
+            </p>
+            <p>
+                <b>8. NVARCHAR2:</b> Variable-length national character set strings.
+            </p>
+            <p>
+                <b>9. CLOB:</b> Character Large Objects for storing large character data.
+            </p>
+            <p>Output:</p>
+            <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                <thead class='table-secondary'>
+                    <tr style="text-align: left;">
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>HR</td>
+                    </tr>
+                    <tr>
+                        <td>Jane</td>
+                        <td>Smith</td>
+                        <td>IT</td>
+                    </tr>
+                    <tr>
+                        <td>Bob</td>
+                        <td>Johnson</td>
+                        <td>Sales</td>
+                    </tr>
+                    <tr>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>Marketing</td>
+                    </tr>
+                    <tr>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>Finance</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <div class="code-container"><span><i class="left-copy-btn">Example:</i></span>
+            <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i> Copy </span>
+            <pre class="side_border"><code class="language-sql"> SELECT employees.FirstName, employees.LastName, departments.Department 
+ FROM 
+ employees FULL JOIN departments 
+ ON employees.ID = departments.ID;</code></pre>
+            </div>
+            <br>
+            <p>In this example, I've used simple tables with a common ID column for illustration. In practice, you would
+                use SQL joins with more complex data structures and relationships between tables to retrieve the desired
+                data. The choice of join type depends on the specific requirements of your query and the relationship
+                between the tables you're working with.</p>
+            <br>
+                        <div class="code-container "><span><i class="left-copy-btn">Example:</i></span>
+                            <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i> Copy </span>
+                            <pre class="side_border"><code class="language-sql"> SELECT employees.FirstName, employees.LastName, departments.Department 
+ FROM 
+ employees FULL JOIN departments 
+ ON employees.ID = departments.ID;</code></pre>
+                        </div>
+                        <br>
+            <br>
+            <div class=" d-flex justify-content-between">
+                <button type="button" class="btn  btn-success">
+                    <i class='fas fa-arrow-left'></i> Previous </button>
+                <button type="button" class="btn btn-success">&nbsp;&nbsp;&nbsp; Next <i
+                        class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+            var getclass = document.getElementById("getclass").textContent;
+            document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>
