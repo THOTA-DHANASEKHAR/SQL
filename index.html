@@ -119,16 +119,20 @@
             <p>
                 <b>4. FULL JOIN:</b>
             </p>
-            <ul></ul>
-            <br>
-            <div class="code-container"><span><i class="left-copy-btn">Example:</i></span>
-                <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i> Copy </span>
-                <pre class="side_border"><code class="language-sql"> SELECT employees.FirstName, employees.LastName, departments.Department 
- FROM 
- employees FULL JOIN departments 
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="btn1"><i class="left-copy-btn">Example:</i></span>
+                    <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i> Copy </span>
+                </div>
+
+                <pre class="side_border"><code class="language-sql">SELECT 
+ employees.FirstName, 
+ employees.LastName, 
  ON employees.ID = departments.ID;</code></pre>
-            </div>
+            </div> 
             <br>
+            <br>
+
             <p>
                 <b>4. INTEGER:</b> Whole numbers with a range of -2,147,483,648 to 2,147,483,647.
             </p>
@@ -186,28 +190,34 @@
             </table>
             <br>
             <br>
-            <div class="code-container"><span><i class="left-copy-btn">Example:</i></span>
-            <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i> Copy </span>
-            <pre class="side_border"><code class="language-sql"> SELECT employees.FirstName, employees.LastName, departments.Department 
- FROM 
- employees FULL JOIN departments 
- ON employees.ID = departments.ID;</code></pre>
-            </div>
+<div class="code-container">
+    <span class="code-header">
+        <span class="btn1"><i class="left-copy-btn">Example:</i></span>
+        <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i>
+            Copy</span>
+        </span>
+    <pre class="side_border"><code class="language-sql">SELECT employees.FirstName, employees.LastName, departments.Department 
+FROM employees.ID = departments.ID
+employees FULL JOIN departments 
+ON ;</code></pre>
+</div>
             <br>
             <p>In this example, I've used simple tables with a common ID column for illustration. In practice, you would
                 use SQL joins with more complex data structures and relationships between tables to retrieve the desired
                 data. The choice of join type depends on the specific requirements of your query and the relationship
                 between the tables you're working with.</p>
             <br>
-                        <div class="code-container "><span><i class="left-copy-btn">Example:</i></span>
-                            <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i> Copy </span>
-                            <pre class="side_border"><code class="language-sql"> SELECT employees.FirstName, employees.LastName, departments.Department 
- FROM 
- employees FULL JOIN departments 
- ON employees.ID = departments.ID;</code></pre>
-                        </div>
-                        <br>
-            <br>
+<div class="code-container">
+    <div class="code-header">
+        <span class="btn1 "><i class="left-copy-btn">Example:</i></span>
+        <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i>
+            Copy</span>
+    </div>
+    <pre class="side_border"><code class="language-sql">SELECT employees.FirstName, employees.LastName, departments.Department 
+FROM 
+employees FULL JOIN</code></pre>
+</div> <br>
+
             <div class=" d-flex justify-content-between">
                 <button type="button" class="btn  btn-success">
                     <i class='fas fa-arrow-left'></i> Previous </button>
