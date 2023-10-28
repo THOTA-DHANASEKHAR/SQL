@@ -58,28 +58,37 @@ body{
     }
 
     .code-container {
-      position: relative;
+      -position: relative;
+      -display: flex;
+      flex-direction: column;
       background-color: #e2e3e5;
-      color: #fff;
       color: black;
-      border-radius: 5px;
+      -border-radius: 5px;
+      padding:0;
+      border: none;
       box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
     }
     .code-container:hover {
       box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
     }
-    .table {
-      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-      border-radius: 3px;
-      overflow: hidden;
+    .outer-code-container{
+      position: fixed;
     }
-    .table:hover {
-      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+    .btn1{
+      padding-top:8px;
+      padding-left: 10px;      
     }
 
+    .code-header {
+    display: flex;
+    justify-content: space-between;
+     display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
     .copy-btn {
-      position: absolute;
+      -position: absolute;
       right: 5px;
       cursor: pointer;
       border: none;
@@ -96,8 +105,18 @@ body{
       border-radius: 0 0 5px 5px;
     }
     .left-copy-btn {
-      padding-left: 2%;
-      font-size: 15px;
+      -padding-left: 2%;
+      -font-size: 15px;
+    }
+
+    
+    .table {
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .table:hover {
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
     }
 
     .sidenav {
