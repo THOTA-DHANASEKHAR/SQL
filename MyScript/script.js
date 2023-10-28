@@ -1,3 +1,4 @@
+/*
 function copyCodeToClipboard(button) {
 	const codeElement = button.nextElementSibling.querySelector("code");
 	const codeToCopy = codeElement.innerText;
@@ -8,6 +9,32 @@ function copyCodeToClipboard(button) {
 		button.innerHTML = '<i class="fas fa-copy"></i> copy';
 		button.classList.remove("copied");
 	}, 3000);
+}
+*/
+
+function copyCodeToClipboard(button) {
+  var codeElement = button.closest(".code-container").querySelector("code");
+
+  if (codeElement) {
+    var textArea = document.createElement("textarea");
+    textArea.value = codeElement.textContent;
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    try {
+      document.execCommand("copy");
+      button.innerHTML = "<i class='fas fa-check'> </i> Copied!";
+      button.classList.add("copied");
+    } catch (err) {
+      console.error("Unable to copy to clipboard: " + err);
+    }
+    document.body.removeChild(textArea);
+
+    setTimeout(function () {
+      button.innerHTML = '<i class="fas fa-copy"></i> copy';
+		  button.classList.remove("copied");
+    }, 2000);
+  }
 }
 
 const toggleButtons = document.querySelectorAll('.toggleButton');
