@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+</head>
+
+<body class="body">
+    <h3 id='getclass'>SQL_Syntax</h3>
+    <div>
+        <section id="navigation_bar"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom"></section>
+    </div>
+    <div style="padding-top: 4rem">
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
+        <div class="row " id="laptop">
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop"></div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <!--start with your content-->
+        <h2>CREATE TABLE</h2>
+        <p class="parapadding">To create a SQL table, you need to use the CREATE TABLE statement. This statement creates a
+            new database with the specified name.</p>
+        <h4>Table:</h4>
+        
+        <div class='liststyle'>
+            <ul>
+        
+                <li>A table in SQL is a structured collection of data organized into rows and columns. Each row in a table
+                    represents a record or an entry, while each column represents a specific attribute or field of that record.
+                    Tables are used to store, manage, and retrieve data.</li>
+        
+                <li>Tables have a predefined structure defined by the columns they contain. Each column has a name and a data
+                    type that specifies the type of data it can hold (e.g., INT, VARCHAR, DATE).</li>
+        
+                <li>Tables can have a primary key, which is a unique identifier for each row, and they can also have
+                    relationships with other tables through foreign keys.</li>
+        
+                <li>SQL operations like INSERT, SELECT, UPDATE, and DELETE are used to manipulate data in tables.</li>
+        
+            </ul>
+        </div><br>
+        <p>
+            <b>Syntax for Table:</b>
+        </p>
+        <div class="code-container">
+            <div class="code-header">
+                <span class="btn1 ">
+                    <i class="left-copy-btn">Example:</i>
+                </span>
+                <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)">
+                    <i class="fa fa-copy"></i> Copy </span>
+            </div>
+            <pre class="side_border"><code class="language-sql">CREATE TABLE table_name (
+column1 datatype,
+column2 datatype,
+... );</code></pre>
+        </div>
+        <br>
+        <p>
+            <b>Example Query for Table:</b>
+        </p>
+        <div class="code-container">
+            <div class="code-header">
+                <span class="btn1 ">
+                    <i class="left-copy-btn">Example:</i>
+                </span>
+                <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)">
+                    <i class="fa fa-copy"></i> Copy </span>
+            </div>
+            <pre class="side_border"><code class="language-sql">CREATE TABLE employees (
+employee_id INT PRIMARY KEY,
+first_name VARCHAR(50),
+last_name VARCHAR(50),
+hire_date DATE );</code></pre>
+        </div>
+        <br>
+        <p>This will create a new table with four columns: employee_id, first_name, last_name, and hire_date. The
+            employee_id column is
+            the primary key.</p>
+        <br><br>
+        <h5>CREATE TABLE FROM EXISTING TABLE:</h5><br>
+
+        <b>Copy table with Data:</b>
+        <p>CREATE TABLE statement with a SELECT statement to copy data from the source table into the new table. </p>
+        <div class="code-container">
+            <div class="code-header">
+                <span class="btn1 ">
+                    <i class="left-copy-btn">Example:</i>
+                </span>
+                <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)">
+                    <i class="fa fa-copy"></i> Copy </span>
+            </div>
+            <pre class="side_border"><code class="language-sql">CREATE TABLE employees_new
+AS
+SELECT *
+FROM employees;</code></pre>
+        </div><br>
+        <p>This will copy all of the data from the customers table to the customers_new table.</p>
+        <br><b>Copy table Schema:</b><br>
+        <p>To create a table without copying data, you can use the CREATE TABLE AS statement. This statement creates a
+            new table with the same structure as an existing table, but without any of the data.</p>
+        <div class="code-container">
+            <div class="code-header">
+                <span class="btn1 ">
+                    <i class="left-copy-btn">Example:</i>
+                </span>
+                <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)">
+                    <i class="fa fa-copy"></i> Copy </span>
+            </div>
+            <pre class="side_border"><code class="language-sql">CREATE TABLE employees_new
+AS (
+SELECT *
+FROM employees
+WHERE 1=2
+);</code></pre>
+        </div><br>
+        <p>The WHERE 1=2 clause ensures that no rows are returned from the employees table, and therefore no data is
+            copied to the new table.</p>
+        <br>
+        <h4>Table Naming:</h4><br>
+        
+        <p class="parapadding"><b>1. Use Singular Nouns:</b> Table names should generally be in the singular form, such
+            as "employee" instead of
+            "employees." This helps with readability.</p>
+        
+        <p class="parapadding"><b>2. Use Descriptive Names:</b> Choose names that reflect the type of data the table
+            stores. For example,
+            "order_details" is more descriptive than "table1."</p>
+        
+        <p class="parapadding"><b>3. Avoid Spaces and Special Characters:</b> Stick to alphanumeric characters and
+            underscores. Avoid spaces,
+            hyphens, and special characters in table names.</p>
+        
+        <p class="parapadding"><b>4. Use All Lowercase:</b> Consistently using lowercase letters for table names is a
+            common convention.</p>
+        
+        <p class="parapadding"><b>5. Use Underscores for Compound Words:</b> If a table name consists of multiple words,
+            separate them with
+            underscores, e.g., "customer_orders" or "product_categories."</p>
+        <p class="parapadding"><b>6. Use prefixes and suffixes to group related tables together:</b> For example, you
+            could use the prefix products_ for all
+            tables that store product information, and the suffix _history for all tables that store historical data.
+        </p>
+
+        <hr>
+        <h4>Column Naming:</h4><br>
+
+        <p class="parapadding"><b>1. Use Descriptive Names:</b> Columns should have names that clearly indicate the type
+            of data they store. For
+            example, use "first_name" instead of "fld1."</p>
+
+        <p class="parapadding"><b>2. Use All Lowercase:</b> Consistently use lowercase letters for column names.</p>
+
+        <p class="parapadding"><b>3. Avoid Spaces and Special Characters:</b> Stick to alphanumeric characters and
+            underscores for column names.</p>
+
+        <p class="parapadding"><b>4. Be Consistent:</b> Maintain consistency in naming conventions across your database.
+            If you use underscores in
+            one table or column name, use them in others as well.</p>
+        <br>
+        <hr>
+        <div class=" d-flex justify-content-between">
+            <button type="button" class="btn  btn-success1">
+                <i class='fas fa-arrow-left'></i> Previous </button>
+            <button type="button" class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i
+                    class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+        </div>
+        <br><br><br>
+
+    </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

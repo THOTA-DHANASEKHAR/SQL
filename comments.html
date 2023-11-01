@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <h3 id='getclass'>SQL_Syntax</h3>
+    <div>
+        <section id="navigation_bar"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom"></section>
+    </div>
+    <div style="padding-top: 4rem">
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
+
+        <div class="row " id="laptop">
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+            </div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <br>
+        <!--start with your content-->
+        <div>
+            <h2>SQL comments</h2><br>
+            
+            <p>SQL supports both single-line and multi-line comments to add notes or explanations within SQL code. The
+                syntax for comments varies between database systems. Common ways to add comments in SQL include:</p>
+            
+            <h4>There are two types of SQL comments:</h4>
+
+            <p><B>Single-line comments:</B> Single-line comments start with two hyphens (--) and end at the end of the line. Any text between
+            the -- and the end of the line is ignored by the SQL parser.</p>
+
+            <p><B>Multi-line comments:</B> Multi-line comments start with a slash and an asterisk (/*) and end with an asterisk and a slash
+            (*/). Any text between the /* and the */ is ignored by the SQL parser.</p> <br>
+
+            
+            <h4>Here are some examples of SQL comments:</h4>
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre class="side_border"><code class="language-sql">-- This is a single-line comment.
+                
+/*
+This is a multi-line comment.
+It can span multiple lines.
+*/
+
+SELECT * FROM customers; -- This query selects all rows from the `customers` table.
+
+UPDATE customers SET name = 'John Doe' WHERE id = 1; /* This query updates the name of the customer with the ID of 1 to 'John Doe'. */;</code></pre>
+            </div><br>
+            <h4>Comments can be used to:</h4>
+            <div class='liststyle'>
+                <ul>
+                    <li>Explain the purpose of a SQL statement or section of code.</li>
+                    <li>Disable SQL statements without deleting them, which can be useful for debugging or testing purposes.</li>
+                    <li>Add additional information to SQL code, such as the date the code was written or the author of the code.
+                    </li>
+                </ul>
+            </div><br>
+            <p>Comments are a good way to make your SQL code more readable and maintainable. It is especially important to use comments
+            when writing complex SQL queries or when working on code that will be shared with other developers.</p><br>
+<br><br>
+
+            <hr>
+            <div class=" d-flex justify-content-between">
+                <button type="button" class="btn  btn-success1">
+                    <i class='fas fa-arrow-left'></i> Previous </button>
+                <button type="button" class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i
+                        class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

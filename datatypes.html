@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <h3 id='getclass'>SQL_Syntax</h3>
+    <div>
+        <section id="navigation_bar"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom"></section>
+    </div>
+    <div style="padding-top: 4rem">
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
+
+        <div class="row " id="laptop">
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+            </div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <br>
+        <!--start with your content-->
+        <div>
+            <h2>SQL Data Types</h2><br>
+            
+            <p>SQL supports various data types that define the kind of data that can be stored in a database table's columns. These data types help maintain data integrity and improve query performance. Here are some common SQL data types:</p>
+
+            <br>
+            <h4>Numeric Data Types:</h4>
+
+            <p><b>INTEGER (INT):</b> Represents whole numbers (e.g., -10, 0, 42).</p>
+
+            <p><b>SMALLINT:</b> Stores small whole numbers, often with a smaller range than INTEGER.</p>
+
+            <p><b>BIGINT:</b> Stores large whole numbers with a larger range than INTEGER.</p>
+
+            <p><b>NUMERIC(P, S) or DECIMAL(P, S):</b> Represents exact numeric values with a specified precision (P) and
+                scale (S). P is the total number of digits, and S is the number of digits to the right of the decimal
+                point.</p>
+
+            <p><b>FLOAT(P):</b> Represents approximate numeric values with a specified precision (P). It's suitable for
+                scientific and engineering calculations.</p>
+
+            <p><b>REAL:</b> A single-precision floating-point number.</p>
+
+            <p><b>DOUBLE PRECISION:</b> A double-precision floating-point number.</p>
+
+            <br>
+            <h4>Character String Data Types:</h4>
+
+            <p><b>CHAR(N):</b> Stores fixed-length character strings with a specified length (N). Padded with spaces to
+                reach the specified length.</p>
+
+            <p><b>VARCHAR(N):</b> Stores variable-length character strings with a maximum length of N characters.</p>
+
+            <p><b>TEXT:</b> Stores large text data.</p>
+
+            <br>
+            <h4>Date and Time Data Types:</h4>
+
+            <p><b>DATE:</b> Stores dates (year, month, day).</p>
+            <p><b>TIME:</b> Stores times (hours, minutes, seconds).</p>
+
+            <p><b>TIMESTAMP:</b> Stores date and time together.</p>
+
+            <p><b>INTERVAL:</b> Represents a period of time.</p>
+
+            <br>
+            <h4>Binary Data Types:</h4>
+
+            <p><b>BINARY(N):</b> Stores fixed-length binary data with a specified length (N).</p>
+
+            <p><b>VARBINARY(N):</b> Stores variable-length binary data with a maximum length of N bytes.</p>
+
+            <p><b>BLOB:</b> Stores large binary objects, such as images, audio, or binary documents.</p>
+
+            <br>
+            <h4>Boolean Data Type:</h4>
+
+            <p><b>BOOLEAN (BOOL):</b> Represents true or false values.</p>
+
+            <br>
+            <h4>Enumerated Data Types:</h4>
+
+            <p><b>ENUM:</b> Stores one of a predefined list of values.</p>
+
+            <br>
+            <h4>Bit Data Types:</h4>
+
+            <p><b>BIT(N):</b> Stores fixed-length bit strings with a specified length (N).</p>
+
+            <br>
+            <h4>Geospatial Data Types:</h4>
+
+            <p><b>GEOMETRY:</b> Stores geometric data, such as points, lines, and polygons.</p>
+
+            <br>
+            <h4>JSON Data Types:</h4>
+
+            <p><b>JSON:</b> Stores JSON-formatted data.</p>
+
+            <br>
+            <h4>Custom Data Types:</h4>
+
+            <p>Some database systems allow you to define custom data types, which can be based on existing types but
+                have additional constraints or behaviors.</p>
+
+            <br>
+            <h4>Special Data Types:</h4>
+
+            <p><b>XML:</b> Some database systems support XML data types for storing XML documents.</p>
+
+            <p>These data types may vary slightly from one database management system (DBMS) to another (e.g., MySQL,
+                PostgreSQL, SQL Server, Oracle). Additionally, DBMSs may have their own unique data types and
+                extensions. It's essential to refer to the documentation of the specific DBMS you are using for detailed
+                information on data types and their usage in that system.</p><br>
+            <hr>
+            <div class=" d-flex justify-content-between">
+                <button type="button" class="btn  btn-success1">
+                    <i class='fas fa-arrow-left'></i> Previous </button>
+                <button type="button" class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i
+                        class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

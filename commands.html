@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <h3 id='getclass'>SQL_Syntax</h3>
+    <div>
+        <section id="navigation_bar"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom"></section>
+    </div>
+    <div style="padding-top: 4rem">
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
+
+        <div class="row " id="laptop">
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+            </div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <br>
+        <!--start with your content-->
+        <div>
+            <h2>Overview of SQL Commands</h2><br>
+            <p>SQL is a powerful tool for interacting with relational databases. It enables users to
+            perform various operations on the data stored within a database. Here are the main types of SQL statements:</p><br>
+            <div class="square-image">
+                <img src="Images/SQLCOMMANDS.png" alt="some sql image">
+            </div>            
+            <h4>Data Definition Language (DDL)</h4><br>
+            <ul>
+                <li><b>CREATE:</b> Creates a new database object, such as a databese, table, view or an index with specified names,
+                    columns and data types.</li><br>
+                <li><b>ALTER:</b> Modifies the structure of an existing database object such as adding, modifying, or deleting
+                    columns.</li><br>
+                <li><b>DROP:</b> Deletes a database object, such as a table or an index.</li><br>
+                <li><b>TRUNCATE:</b> Removes all rows from a table while keeping its structure intact.</li><br>
+                <li><b>COMMENT:</b> Adds comments to database objects, helping with documentation.</li><br>
+            </ul>
+            
+            <h4>Data Query Language (DQL)</h4><br>
+            <ul>
+                <li><b>SELECT:</b> Retrieves data from one or more tables based on specified criteria.</li><br>
+                <li><b>FROM:</b> Specifies the table(s) from which to retrieve data. </li><br>
+                <li><b>WHERE:</b> Filters data based on specified conditions.</li><br>
+                <li><b>GROUP BY:</b> Groups data based on one or more columns.</li><br>
+                <li><b>HAVING:</b> Filters grouped data based on aggregate conditions.</li><br>
+                <li><b>ORDER BY:</b> Sorts the result set based on specified columns.</li><br>
+                <li><b>JOIN:</b> Combines rows from multiple tables based on related columns.</li><br>
+            </ul>
+            
+            <h4>Data Manipulation Language (DML)</h4><br>
+            <ul>
+                <li><b>INSERT:</b> Adds new rows of data into a table.</li><br>
+                <li><b>UPDATE:</b> Modifies existing data in a table based on specified conditions.</li><br>
+                <li><b>DELETE:</b> Removes rows of data from a table based on specified conditions.</li><br>
+                <li><b>MERGE:</b> Combines INSERT, UPDATE, and DELETE operations into a single statement (not supported in all
+                    database
+                    systems).</li><br>
+            
+                <li><b>SELECT INTO:</b> The SELECT INTO statement copies data from one table into a new table</li><br>
+            </ul>
+            
+            <h4>Data Control Language (DCL)</h4><br>
+            <ul>
+                <li><b>GRANT:</b> Assigns specific privileges to users or roles.</li><br>
+                <li><b>REVOKE:</b> Removes specific privileges from users or roles.</li><br>
+            </ul>
+            
+            <h4>Transaction Control Language (TCL)</h4><br>
+            <ul>
+                <li><b>COMMIT:</b> Saves all changes made during the current transaction.</li><br>
+                <li><b>ROLLBACK:</b> Undoes changes made during the current transaction and restores the data to its previous state.
+                </li><br>
+                <li><b>SAVEPOINT:</b> Creates a point within a transaction to which you can later roll back.</li><br>
+                <li><b>SET TRANSACTION:</b> Sets properties for a transaction, such as isolation level and access mode.</li><br>
+            </ul>
+
+            <br>
+            <hr>
+            <div class=" d-flex justify-content-between">
+                <button type="button" class="btn  btn-success1">
+                    <i class='fas fa-arrow-left'></i> Previous </button>
+                <button type="button" class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i
+                        class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+            </div>
+            <br><br><br>
+            </div>
+            </div>
+            
+            <script src="MyScript/script.js"></script>
+            <!-- Load necessary JS libraries -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+            <!-- Custom JS -->
+            <script>
+                var getclass = document.getElementById("getclass").textContent;
+                document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+            </script>
+            </body>
+            
+            </html>

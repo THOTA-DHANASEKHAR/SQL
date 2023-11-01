@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
     <title>Feelit.Today</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,224 +18,154 @@
     <script defer src="MyScript/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="MyStyles/styles.css">
     <script src="MyScript/scripts.js"></script>
+
 </head>
 
 <body class="body">
-    <h3 id='getclass' style='display: none;'>SQL_Syntax</h3>
-    <div >
-        <section id="navigation_bar" style="position: fixed !important"></section>
+    <h3 id='getclass'>SQL_HOME</h3>
+    <div>
+        <section id="navigation_bar"></section>
     </div>
     <div>
-        <section id="navigation_bar_botom" style="position: fixed !important"></section>
+        <section id="navigation_bar_botom"></section>
     </div>
     <div style="padding-top: 4rem">
-    <div id="mobile" >
-        <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
-        <div id="listofitems_mobile1" style="padding:5%;"></div>
-    </div>
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
 
-    <div class="row " id="laptop" style="overflow: hidden;">
-        <div class="col-2  LeftSideIndex" id="listofitems_Laptop" style="overflow: hidden; overflow-y: scroll;"></div>
-        <div class="col-10  RightSideIndex" style="overflow: hidden; overflow-y: scroll;">
-            <div class="row">
-                <div class="col-10" id="listofitems_Laptop1" style="padding:5%;"></div>
-                <div class="col-2"></div>
+        <div class="row " id="laptop">
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+            </div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
             </div>
         </div>
     </div>
-    </div>
-    <div id="content" style="display:none; ">
-        <h2>Some SQL Content</h2>
-        <br>
-        <div class=" d-flex justify-content-between">
-            <button type="button" class="btn  btn-success">
-                <i class='fas fa-arrow-left'></i> Previous </button>
-            <button type="button" class="btn btn-success">&nbsp;&nbsp;&nbsp; Next <i
-                    class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
-        </div>
-        <br>
+    <div id="content">
+
         <!--start with your content-->
+
+
+        <h4>What is SQL ?</h4><br>
         <div>
-            <br>
-            <br>
-            <p>This detailed overview provides insight into the key milestones and developments in the Oracle Database
-                supports a wide range of data types to store various types of data efficiently. Here is a detailed list
-                of Oracle data types:</p>
-            <br>
-            <p>
-                <b>1. NUMBER:</b> Stores fixed or floating-point numbers. You can specify precision and scale.
-            </p>
-            <p>
-                <b>2. BINARY_FLOAT:</b> Single-precision floating-point numbers.
-            </p>
-            <p>
-                <b>3. BINARY_DOUBLE:</b> Double-precision floating-point numbers.
-            </p>
-            <p>
-                <b>10. NCLOB:</b> National Character Large Objects for storing large national character data.
-            </p>
-            <div class="square-image">
-                <img src="Images/SQLCOMMANDS.png" alt="some sql image">
-          </div>
-            <p>Each of these data types serves a specific purpose, allowing you to store and manipulate data in various
-                ways within an Oracle database. The choice of data type depends on the nature of the data you need to
-                store and the operations you want to perform on that data.</p>
-            <p>SQL joins are used to combine rows from two or more tables based on a related column between them. There
-                are several types of SQL joins, including INNER JOIN, LEFT JOIN (or LEFT OUTER JOIN), RIGHT JOIN (or
-                RIGHT OUTER JOIN), and FULL JOIN (or FULL OUTER JOIN). I'll provide examples of each type of join along
-                with tables and queries to illustrate their use.</p>
-            <p>Let's consider two simple tables:</p>
-            <p>
-                <b>Table:</b>employees
-            </p>
-            <table border="2" class="dataframe table-sm table-bordered dataframe table table-bordered">
-                <thead class='table-secondary'>
-                    <tr style="text-align: left;">
-                        <th>ID</th>
-                        <th>FirstName</th>
-                        <th>LastName</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>John</td>
-                        <td>Doe</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jane</td>
-                        <td>Smith</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Bob</td>
-                        <td>Johnson</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <br>
-            
-            <p>
-                <b>4. FULL JOIN:</b>
-            </p>
-            <div class="code-container">
-                <div class="code-header">
-                    <span class="btn1"><i class="left-copy-btn">Example:</i></span>
-                    <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i> Copy </span>
-                </div>
+            <p>SQL, which stands for Structured Query Language, is a powerful and widely used programming language
+                designed for managing and manipulating relational database management systems (RDBMS). It provides a
+                standard way to interact with and extract data from databases, making it an essential tool for working
+                with structured data.</p>
+            <div class='liststyle'>
+                <ul>
 
-                <pre class="side_border"><code class="language-sql">SELECT 
- employees.FirstName, 
- employees.LastName, 
- ON employees.ID = departments.ID;</code></pre>
-            </div> 
-            <br>
-            <br>
+                    <li>SQL is a domain-specific language for managing relational databases.</li>
 
-            <p>
-                <b>4. INTEGER:</b> Whole numbers with a range of -2,147,483,648 to 2,147,483,647.
-            </p>
-            <p>
-                <b>5. CHAR:</b> Fixed-length character strings.
-            </p>
-            <p>
-                <b>6. VARCHAR2:</b> Variable-length character strings with a maximum length.
-            </p>
-            <p>
-                <b>7. NCHAR:</b> Fixed-length national character set strings.
-            </p>
-            <p>
-                <b>8. NVARCHAR2:</b> Variable-length national character set strings.
-            </p>
-            <p>
-                <b>9. CLOB:</b> Character Large Objects for storing large character data.
-            </p>
-            <p>Output:</p>
-            <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
-                <thead class='table-secondary'>
-                    <tr style="text-align: left;">
-                        <th>FirstName</th>
-                        <th>LastName</th>
-                        <th>Department</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>HR</td>
-                    </tr>
-                    <tr>
-                        <td>Jane</td>
-                        <td>Smith</td>
-                        <td>IT</td>
-                    </tr>
-                    <tr>
-                        <td>Bob</td>
-                        <td>Johnson</td>
-                        <td>Sales</td>
-                    </tr>
-                    <tr>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td>Marketing</td>
-                    </tr>
-                    <tr>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td>Finance</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <br>
-<div class="code-container">
-    <span class="code-header">
-        <span class="btn1"><i class="left-copy-btn">Example:</i></span>
-        <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i>
-            Copy</span>
-        </span>
-    <pre class="side_border"><code class="language-sql">SELECT employees.FirstName, employees.LastName, departments.Department 
-FROM employees.ID = departments.ID
-employees FULL JOIN departments 
-ON ;</code></pre>
-</div>
-            <br>
-            <p>In this example, I've used simple tables with a common ID column for illustration. In practice, you would
-                use SQL joins with more complex data structures and relationships between tables to retrieve the desired
-                data. The choice of join type depends on the specific requirements of your query and the relationship
-                between the tables you're working with.</p>
-            <br>
-<div class="code-container">
-    <div class="code-header">
-        <span class="btn1 "><i class="left-copy-btn">Example:</i></span>
-        <span class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"></i>
-            Copy</span>
-    </div>
-    <pre class="side_border"><code class="language-sql">SELECT employees.FirstName, employees.LastName, departments.Department 
-FROM 
-employees FULL JOIN</code></pre>
-</div> <br>
+                    <li>It allows users to create, update, and query databases to retrieve, modify, and delete data.
+                    </li>
 
+                    <li>SQL is used to define the structure of databases (data definition language or DDL) and
+                        manipulate the data within them (data manipulation language or DML).</li>
+
+                </ul>
+            </div><br>
+            <div class="Rec-image">
+                <img src="Images/SQL2.png" alt="some sql image">
+            </div>
+
+            <h4>Why SQL ?</h4>
+
+            <div class='liststyle'>
+                <ul>
+                    <li>SQL is essential for working with relational databases, which are used in a wide range of
+                        applications and industries.</li>
+
+                    <li>It provides a consistent and efficient way to retrieve and manipulate data, ensuring data
+                        integrity and security.</li>
+
+                    <li>SQL is the standard language for querying and managing data in most relational database
+                        management systems (RDBMS), making it highly portable across different systems.</li>
+
+                </ul>
+            </div><br>
+
+            <h4>History of SQL :</h4>
+
+
+            <p>SQL, which stands for Structured Query Language, is a programming language designed for managing data
+                held in a relational database management system (RDBMS). It is one of the most widely used and popular
+                programming languages in the world, and is used by millions of people every day to store, retrieve, and
+                manipulate data.</p>
+
+            <p>SQL was first developed in the early 1970s by Donald D. Chamberlin and Raymond F. Boyce at IBM. It was
+                originally called SEQUEL, which stood for Structured English Query Language. SEQUEL was designed to be a
+                simple and intuitive way to access and manipulate data stored in IBM's System R relational database
+                management system (RDBMS).</p>
+
+            <h6>SQL has evolved significantly over the years. Some of the key milestones in the evolution of SQL
+                include:</h6>
+            <div class='liststyle-1'>
+                <ul>
+                    <li><b>1979:</b> Relational Software, Inc. (now Oracle) introduces the first commercially available
+                        implementation of SQL.</li>
+                    <li><b>1986:</b> The American National Standards Institute (ANSI) publishes the first official SQL
+                        standard, known as SQL-86.</li>
+                    <li><b>1989:</b> SQL-89 is published, adding support for transactions and triggers.</li>
+                    <li><b>1992:</b> SQL-92 is published, a major update to the SQL standard that includes support for
+                        subqueries, outer joins, and window functions.</li>
+                    <li><b>1999:</b> SQL-99 is published, adding support for object-relational databases, XML data, and
+                        user-defined data types.</li>
+                    <li><b>2003:</b> SQL-2003 is published, adding support for recursive queries, window functions, and
+                        common table expressions.</li>
+                    <li><b>2011:</b> SQL:2011 is published, the most recent version of the SQL standard.</li>
+                </ul><br>
+            </div>
+
+            <h4>Why Learn SQL ?</h4>
+
+            <div class='liststyle'>
+                <ul>
+
+                    <li>SQL is in high demand in the job market. Many organizations require SQL skills for data-related
+                        positions, including data analysts, database administrators, and data engineers.</li>
+
+                    <li>It's a valuable skill for anyone who needs to work with structured data, whether for business
+                        analysis, reporting, or application development.</li>
+
+                    <li>Learning SQL can open up opportunities to work with a wide variety of databases, such as MySQL,
+                        PostgreSQL, Oracle, Microsoft SQL Server, and more.</li>
+                    <li>It is used in Data Analysis, Web Development, Business Intelligence, E-commerce, Healthcare, Finance and many more.
+</li>
+
+                </ul>
+            </div><br>
+
+            <h4>Conclusion</h4>
+
+            <p>SQL is a powerful and versatile language that is essential for anyone who works with data. It is a
+                language that is constantly evolving, and new features and capabilities are being added all the time.
+            </p>
+            <br><br>
             <div class=" d-flex justify-content-between">
-                <button type="button" class="btn  btn-success">
+                <button type="button" class="btn  btn-success1">
                     <i class='fas fa-arrow-left'></i> Previous </button>
-                <button type="button" class="btn btn-success">&nbsp;&nbsp;&nbsp; Next <i
+                <button type="button" class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i
                         class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
             </div>
             <br><br><br>
         </div>
     </div>
+
     <script src="MyScript/script.js"></script>
     <!-- Load necessary JS libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
     <!-- Custom JS -->
     <script>
-            var getclass = document.getElementById("getclass").textContent;
-            document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
     </script>
 </body>
 

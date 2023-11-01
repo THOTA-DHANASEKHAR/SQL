@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <h3 id='getclass'>SQL_Syntax</h3>
+    <div>
+        <section id="navigation_bar"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom"></section>
+    </div>
+    <div style="padding-top: 4rem">
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
+
+        <div class="row " id="laptop">
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+            </div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <!--start with your content-->
+        <div><br>
+            <h4>TRUNCATE STATEMENT SQL:</h4><br>
+
+            <p class="parapadding">Truncate is a SQL operation that is used to quickly remove all the data from a table,
+                effectively resetting the table to an empty state. It is different from the DELETE statement in that it
+                is faster and uses fewer system resources, but it also has some limitations and considerations:</p>
+
+            <p class="parapadding">1. Truncate is a DDL (Data Definition Language) statement, not a DML (Data
+                Manipulation Language) statement, which means it is used to modify the structure of a table, not its
+                data. Because of this, it cannot be rolled back.</p>
+
+            <p class="parapadding">2. Truncate removes all rows from a table, but it does not log individual row
+                deletions. This makes it faster than the DELETE statement, which generates individual row delete
+                operations in the transaction log.</p>
+
+            <p class="parapadding">3. Truncate is typically used when you want to quickly remove all data from a table
+                and reset it to an empty state, such as when preparing a table for new data to be inserted.</p><br>
+
+            <b>TRUNCATE SYNTAX:</b>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">SYNTAX:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre class="side_border"><code class="language-sql"> TRUNCATE TABLE table_name;</code></pre>
+            </div><br>
+            <p>Replace `table_name` with the name of the table you want to drop. For example, if you want to drop
+                a table named "employee_table," you would use the following SQL command:</p><br>
+
+            <h6 >TRUNCATE EXAMPLE:</h6>
+                    <div class="code-container">
+                        <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                                class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                                Copy</span></div>
+                        <pre class="side_border"><code class="language-sql"> TRUNCATE TABLE employee_table</code></pre>
+                    </div><br>
+
+
+            <p class="parapadding">Where `table_name` is the name of the table you want to truncate. Make sure you have
+                the necessary permissions to execute the TRUNCATE statement on the specified table.</p>
+
+            <p class="parapadding">It's important to note that TRUNCATE does not have a WHERE clause because it removes
+                all rows in the table. If you want to delete specific rows based on a condition, you should use the
+                DELETE statement instead.</p>
+
+            <p class="parapadding">Also, be cautious when using TRUNCATE because it is irreversible, and it can cause
+                data loss if not used carefully. Always back up your data or work with a copy of the table when using
+                TRUNCATE to avoid accidental data deletion.</p><br>
+            <hr>
+            <div class=" d-flex justify-content-between">
+                <button type="button" class="btn  btn-success1">
+                    <i class='fas fa-arrow-left'></i> Previous </button>
+                <button type="button" class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i
+                        class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

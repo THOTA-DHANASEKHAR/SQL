@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <h3 id='getclass'>SQL_Syntax</h3>
+    <div>
+        <section id="navigation_bar"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom"></section>
+    </div>
+    <div style="padding-top: 4rem">
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
+
+        <div class="row " id="laptop">
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+            </div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <!--start with your content-->
+        <div>
+            <h4>ALTER DATABASE</h4><br>
+
+            <p>The `ALTER DATABASE` statement is used to make changes to an existing database in SQL, particularly in
+                the context of database management systems like Microsoft SQL Server, MySQL, PostgreSQL, Oracle, and
+                others. This statement allows you to perform various tasks related to database administration. The
+                specific syntax and capabilities may vary between different database management systems, but here are
+                some common tasks you can perform using the `ALTER DATABASE` statement:</p>
+
+            <br>
+            <p><b>1. Change Database Collation:</b> You can use `ALTER DATABASE` to change the collation of a database.
+                Collation settings affect how data is sorted and compared. For example:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER DATABASE database_name COLLATE new_collation;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>2. Set Database Options:</b> You can modify various database-level options, such as recovery model,
+                compatibility level, and other configuration settings:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER DATABASE database_name SET option_name = option_value;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>3. Change Database Owner:</b> You can change the owner of a database using the `ALTER DATABASE`
+                statement. This is typically done for administrative purposes:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER DATABASE database_name SET OWNER TO new_owner;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>4. Modify Filegroups:</b> You can add or remove filegroups or files within a database. This is useful
+                for managing the physical storage of data:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER DATABASE database_name ADD FILEGROUP filegroup_name; ALTER DATABASE database_name ADD FILE (NAME = logical_name, FILENAME = 'file_path') TO FILEGROUP filegroup_name;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>5. Take a Database Offline or Bring it Online:</b> You can use the `ALTER DATABASE` statement to take
+                a database offline for maintenance or bring it back online:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER DATABASE database_name SET OFFLINE; ALTER DATABASE database_name SET ONLINE;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>6. Set Database State:</b> You can change the state of a database, for example, from RESTORING to
+                NORMAL, or from READ_ONLY to READ_WRITE.</p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER DATABASE database_name SET STATE = state_name;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>7. Enable/Disable Triggers:</b> You can enable or disable database-level triggers, which are used to
+                perform actions in response to database events.</p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER DATABASE database_name ENABLE|DISABLE TRIGGER trigger_name;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>8. Add/Remove Database Encryption:</b> Some database systems support the encryption of a database. You
+                can use the `ALTER DATABASE` statement to enable or disable encryption.</p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER DATABASE database_name SET ENCRYPTION ON; ALTER DATABASE database_name SET ENCRYPTION OFF;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>9. Change Database Compatibility Level:</b> You can change the compatibility level of a database,
+                which affects how the database behaves with regard to SQL features and optimization.</p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER DATABASE database_name SET COMPATIBILITY_LEVEL = compatibility_level;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>10. Shrink a Database:</b> You can use `ALTER DATABASE` to shrink the data and log files of a database
+                to free up space.</p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER DATABASE database_name SET AUTO_SHRINK ON;</code></pre>
+            </div><br>
+
+            <p>Keep in mind that the availability of these options and the specific syntax may vary depending on the
+                database management system you are using. Always refer to the documentation of your specific DBMS for
+                detailed information on how to use the `ALTER DATABASE` statement for your database administration
+                needs. Additionally, be cautious when making changes to a database, as these operations can have
+                significant implications for the database's integrity and performance.</p><br>
+            <hr>
+            <div class=" d-flex justify-content-between">
+                <button type="button" class="btn  btn-success1">
+                    <i class='fas fa-arrow-left'></i> Previous </button>
+                <button type="button" class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i
+                        class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

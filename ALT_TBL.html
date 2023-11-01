@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <h3 id='getclass'>SQL_Syntax</h3>
+    <div>
+        <section id="navigation_bar"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom"></section>
+    </div>
+    <div style="padding-top: 4rem">
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
+
+        <div class="row " id="laptop">
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+            </div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <!--start with your content-->
+        <div>
+            <h4>ALTER TABLE:</h4><br>
+
+            <p>In SQL , the `ALTER TABLE` statement is used to modify an existing database table's structure. It allows
+                you to make various changes to a table, such as adding or dropping columns, changing the data type of
+                columns, and specifying constraints or indexes. Here's a breakdown of the commonly used `ALTER TABLE`
+                commands:</p>
+
+            <br>
+            <p><b>1. Adding a Column:</b> You can use the `ADD` clause to add a new column to an existing table. For
+                example:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql">ALTER TABLE table_name 
+ADD column_name data_type;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>2. Dropping a Column:</b> You can remove an existing column from a table using the `DROP COLUMN`
+                clause. Be cautious when doing this, as it permanently deletes the specified column and its data.</p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql">ALTER TABLE table_name 
+DROP COLUMN column_name;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>3. Modifying a Column:</b> You can change the data type or constraints of an existing column using the
+                `ALTER COLUMN` clause. For example, you can change the data type of a column:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql">ALTER TABLE table_name 
+ALTER COLUMN column_name 
+SET DATA TYPE new_data_type;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>4. Renaming a Table:</b> You can change the name of an existing table using the `RENAME TO`
+                clause:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql">ALTER TABLE old_table_name 
+RENAME TO new_table_name;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>5. Adding Constraints:</b> You can add constraints like primary keys, unique constraints, and foreign
+                keys to a table. For example, to add a primary key constraint:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql">ALTER TABLE table_name 
+ADD PRIMARY KEY (column_name);</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>6. Dropping Constraints:</b> You can remove constraints using the `DROP CONSTRAINT` clause. For
+                instance, to drop a unique constraint:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql">ALTER TABLE table_name 
+DROP CONSTRAINT constraint_name;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>7. Adding Indexes:</b> You can create indexes on columns for optimizing query performance. For
+                example, to add a non-unique index:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql">CREATE INDEX index_name 
+ON table_name (column_name);</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>8. Dropping Indexes:</b> You can remove indexes using the `DROP INDEX` clause:</b></p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre class="side_border"><code class="language-sql"> DROP INDEX index_name;</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>9. Adding or Removing Triggers:</b> You can use `ALTER TABLE` to add or remove triggers associated
+                with a table. Triggers are used to execute actions in response to data changes.</p>
+
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql">ALTER TABLE table_name 
+ADD TRIGGER trigger_name ...</code></pre>
+            </div><br>
+
+            <br>
+            <p><b>10. Modifying Table Options:</b> Depending on the database system you are using, you may be able to
+                modify various table options, such as storage parameters, collation settings, or tablespace assignments.
+            </p>
+
+            <p>The specific syntax and capabilities of the `ALTER TABLE` statement can vary between different database
+                management systems (DBMS) like MySQL, PostgreSQL, SQL Server, and Oracle. It's essential to consult the
+                documentation for your particular DBMS to understand the supported features and syntax. Also, be
+                cautious when making structural changes to a table, as it can have significant implications for your
+                database and its data. Always make sure to back up your data before performing such operations,
+                especially in a production environment.</p><br>
+            <hr>
+            <div class=" d-flex justify-content-between">
+                <button type="button" class="btn  btn-success1">
+                    <i class='fas fa-arrow-left'></i> Previous </button>
+                <button type="button" class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i
+                        class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

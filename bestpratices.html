@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <h3 id='getclass'>SQL_Intro</h3>
+    <div>
+        <section id="navigation_bar"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom"></section>
+    </div>
+    <div style="padding-top: 4rem">
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
+
+        <div class="row " id="laptop">
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+            </div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <br>
+        <!--start with your content-->
+        <div>
+            <h3>SQL best practices</h3><br><br>
+
+            <p>SQL, like any programming language, has best practices that can help you write efficient, maintainable, and secure
+                code. Here are some SQL best practices to consider:</p>
+            
+            <p><b>1. Use Prepared Statements :</b>Always use prepared statements or parameterized queries to prevent SQL injection
+                attacks. Parameterize user inputs instead of embedding them directly in SQL queries.</li>
+            </p><br>
+            <p><b>2. Follow a Consistent Naming Convention :</b>Use a consistent naming convention for tables, columns, and other
+                database objects. This makes your code more readable and maintainable.</li>
+            </p><br>
+            <p><b>3. Use Indexes Wisely :</b>Properly index your tables to improve query performance. However, be cautious not to
+                over-index, as it can negatively impact insert and update operations.</li>
+            </p><br>
+            <p><b>4. Write Clear and Commented SQL :</b>Write SQL queries that are easy to read and understand. Use comments to
+                document complex queries, especially when dealing with intricate business logic.</li>
+            </p><br>
+            <p><b>5. Normalize Your Database :</b>Follow the principles of database normalization to minimize data redundancy and
+                maintain data integrity. This involves breaking down tables into smaller, related tables.</li>
+            </p><br>
+            <p><b>6. Be Mindful of Data Types :</b>Choose appropriate data types for your columns to conserve storage space and
+                ensure data accuracy.</li>
+            </p><br>
+            <p><b>7. Optimize Queries :</b>Optimize your SQL queries by using the appropriate join types (e.g., INNER JOIN, LEFT
+                JOIN), avoiding unnecessary subqueries, and limiting the data returned to what is needed.</li>
+            </p><br>
+            <p><b>8. Avoid Using SELECT * :</b>Instead of selecting all columns with "SELECT *," specify the columns you need. This
+                reduces network and memory usage and makes your code more resilient to schema changes.</li>
+            </p><br>
+            <p><b>9. Use Transactions :</b>
+                Wrap related SQL statements in transactions to maintain data consistency and reliability. Use COMMIT and ROLLBACK to
+                control transaction outcomes.</li>
+            </p><br>
+            <p><b>10. Monitor and Tune Performance :</b>
+                Regularly monitor database performance and use database profiling tools to identify and address slow queries.
+                Analyze execution plans and optimize as needed.</li>
+            </p><br>
+            <p><b>11. Backup and Recovery Strategies :</b>
+                Implement regular backup and recovery strategies to safeguard your data against data loss or corruption.</li>
+            </p><br>
+            <p><b>12. Be Cautious with DELETE and UPDATE :</b>
+                When executing DELETE or UPDATE statements, use the WHERE clause to target specific rows. Be cautious to avoid
+                unintended data loss or updates.</li>
+            </p><br>
+            <p><b>13. Avoid Cursors When Possible :</b>
+                Cursors can be slow and resource-intensive. Whenever possible, use set-based operations instead of row-by-row
+                processing.</li>
+            </p><br>
+            <p><b>14. Implement Role-Based Security :</b>
+                Define and assign database roles and permissions to restrict access to data and functions based on user roles.</li>
+            </p><br>
+            <p><b>15. Error Handling :</b>
+                Implement robust error handling in your SQL code, using constructs like TRY...CATCH (for SQL Server) or EXCEPTION
+                blocks (for PostgreSQL) to handle exceptions gracefully.</li>
+            </p><br>
+            <p><b>16. Use Transactions for Batch Operations :</b>
+                When performing batch operations (inserting, updating, or deleting multiple rows), wrap them in a single transaction
+                to improve performance and maintain consistency.</li>
+            </p><br>
+            <p><b>17. Regularly Maintain and Optimize Your Database :</b>
+                Schedule routine maintenance tasks like reindexing, defragmentation, and purging old data to keep your database in
+                good health.</li>
+            </p><br>
+            <p><b>18. Keep SQL Code Separated from Application Code :</b>
+                Maintain a clear separation between your SQL code and application code. Use stored procedures or query files to
+                centralize and version your SQL code.</li>
+            </p><br>
+            <p><b>19. Document Your Database :</b>
+                Create and maintain documentation for your database schema, including tables, columns, relationships, and
+                constraints.</li>
+            </p><br>
+            <p><b>20. Stay Informed and Keep Learning :</b>
+                SQL is continually evolving. Stay up to date with the latest features and best practices by reading documentation,
+                blogs, and books, and consider taking online courses or attending training sessions.</li>
+            </p><br>
+            <p>By following these SQL best practices, you can create more secure, efficient, and maintainable database applications.
+                Remember that the specific best practices may vary slightly depending on the database management system you are
+                using (e.g., MySQL, PostgreSQL, SQL Server, Oracle), so it's essential to refer to the documentation and guidelines
+                for your chosen platform.</p>
+
+            <div class=" d-flex justify-content-between">
+                <button type="button" class="btn  btn-success1">
+                    <i class='fas fa-arrow-left'></i> Previous </button>
+                <button type="button" class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i
+                        class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+            </div>
+            <br><br><br>
+            </div>
+            </div>
+            
+            <script src="MyScript/script.js"></script>
+            <!-- Load necessary JS libraries -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+            <!-- Custom JS -->
+            <script>
+                var getclass = document.getElementById("getclass").textContent;
+                document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+            </script>
+            </body>
+            
+            </html>

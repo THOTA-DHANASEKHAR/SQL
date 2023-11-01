@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <h3 id='getclass'>SQL_Select</h3>
+    <div>
+        <section id="navigation_bar"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom"></section>
+    </div>
+    <div style="padding-top: 4rem">
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
+
+        <div class="row " id="laptop">
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+            </div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <br>
+        <!--start with your content-->
+        <div><br>
+            <h4> Advantages & Disadvantages of SQL</h4>
+
+            <br>
+            <h4>Advantages of SQL:</h4><br>
+
+            <p><b>1. Data Integrity:</b> SQL databases are known for their strong data integrity. They enforce
+                constraints and rules, ensuring that the data stored is accurate and consistent.</p>
+
+            <p><b>2. Data Retrieval:</b> SQL provides a powerful and flexible way to retrieve data from databases using
+                queries. You can retrieve specific data from large datasets easily.</p>
+
+            <p><b>3. Data Manipulation:</b> SQL supports a wide range of operations for data manipulation, including
+                inserting, updating, and deleting records.</p>
+
+            <p><b>4. Data Security:</b> SQL databases offer robust security features to protect sensitive data. You can
+                control access to data at various levels, making it suitable for applications with strict security
+                requirements.</p>
+
+            <p><b>5. Scalability:</b> SQL databases can handle large volumes of data and scale vertically by adding more
+                powerful hardware or scale horizontally through clustering and replication.</p>
+
+            <p><b>6. ACID Properties:</b> SQL databases typically adhere to ACID (Atomicity, Consistency, Isolation,
+                Durability) properties, ensuring the reliability and consistency of transactions.</p>
+
+            <p><b>7. Standardized Language:</b> SQL is an industry-standard language, so database systems that support
+                SQL are widely available, and SQL skills are highly transferable.</p>
+
+            <p><b>8. Join Operations:</b> SQL excels at joining tables, making it easy to combine data from multiple
+                tables for complex queries.</p>
+
+            <br><br>
+            <h4>Disadvantages of SQL:</h4><br>
+
+            <p><b>1. Complexity:</b> SQL can be complex, especially for those new to it. Writing efficient and optimized
+                queries requires a good understanding of the language and the database schema.</p>
+
+            <p><b>2. Performance:</b> Poorly written SQL queries or database designs can lead to performance issues.
+                Inefficient queries can slow down database operations.</p>
+
+            <p><b>3. Vendor Lock-in:</b> Different database management systems (DBMS) have their own SQL dialects and
+                extensions, making it challenging to switch between vendors without significant effort.</p>
+
+            <p><b>4. Schema Changes:</b> Modifying the database schema, such as adding or removing columns, can be
+                complex and may require data migration, which can be time-consuming and risky.</p>
+
+            <p><b>5. Limited Data Types:</b> SQL databases have a fixed set of data types, which may not cover all the
+                data types that modern applications require.</p>
+
+            <p><b>6. Scalability Challenges:</b> While SQL databases can scale, there are limits to vertical scaling.
+                Achieving high levels of scalability may require complex clustering and sharding setups.</p>
+
+            <p><b>7. Complex Maintenance:</b> Managing and maintaining SQL databases can be time-consuming and may
+                require dedicated database administrators (DBAs).</p>
+
+            <p><b>8. Not Suitable for All Data:</b> SQL is designed for structured data in relational databases. It may
+                not be the best choice for handling unstructured or semi-structured data.</p>
+            <div class=" d-flex justify-content-between">
+                <button type="button" class="btn  btn-success1">
+                    <i class='fas fa-arrow-left'></i> Previous </button>
+                <button type="button" class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i
+                        class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

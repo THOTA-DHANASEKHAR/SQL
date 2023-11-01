@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <h3 id='getclass'>SQL_Syntax</h3>
+    <div>
+        <section id="navigation_bar"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom"></section>
+    </div>
+    <div style="padding-top: 4rem">
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
+
+        <div class="row " id="laptop">
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+            </div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <!--start with your content-->
+        <div>
+            <h4>RENAME STATEMENT SQL</h4><br>
+            <p >In SQL, you can rename a table using the `ALTER TABLE` statement with the `RENAME TO` clause.
+                Here's the
+                basic syntax to rename a table:</p>
+
+            <h6>Rename Table Syntax</h6>
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER TABLE old_table_name RENAME TO new_table_name;</code></pre>
+            </div><br>
+
+            <p>Replace `old_table_name` with the name of the table you want to rename, and `new_table_name` with the new
+                name you want to give to the table.</p><br>
+
+        <h6>Rename Table Eample</h6>
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre class="side_border"><code class="language-sql"> ALTER TABLE employees RENAME TO staff;</code></pre>
+            </div><br>
+
+            <p >This SQL statement will rename the "employees" table to "staff." Remember that you might need appropriate
+                permissions to execute this operation, and be cautious when renaming tables, as it can affect queries
+                and applications that depend on the table's name.</p>
+
+            <br>
+                <hr>
+            <br>
+            <h4>RENAME COLUMN</h4><br>
+            <p>In SQL, you can rename a column in a table using the `ALTER TABLE` statement with the `RENAME COLUMN`
+                clause. Here's the basic syntax to rename a column:</p>
+            
+                <b>Rename Column Syntax:</b><br>
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Syntax:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name;</code></pre>
+            </div><br>
+
+            <p>Replace `table_name` with the name of the table containing the column, `old_column_name` with the current
+                name of the column you want to rename, and `new_column_name` with the new name you want to give to the
+                column.</p><br>
+
+            <b>Rename Column Example:</b><br>
+            <div class="code-container">
+                <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                        class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i>
+                        Copy</span></div>
+                <pre
+                    class="side_border"><code class="language-sql"> ALTER TABLE employees RENAME COLUMN employee_name TO full_name;</code></pre>
+            </div><br>
+
+            <p>This SQL statement will rename the "employee_name" column in the "employees" table to "full_name."</p>
+
+            <p>Please note that the specific syntax for renaming a column may vary depending on the database management
+                system (DBMS) you are using, as some DBMSs may use slightly different syntax. Always refer to the
+                documentation of your specific DBMS for the most accurate and up-to-date information on how to rename
+                columns.</p><br>
+            <hr>
+            <div class=" d-flex justify-content-between">
+                <button type="button" class="btn  btn-success1">
+                    <i class='fas fa-arrow-left'></i> Previous </button>
+                <button type="button" class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i
+                        class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>
