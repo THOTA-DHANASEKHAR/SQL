@@ -90,8 +90,8 @@ $(document).ready(function() {
 <a href='/ALT_TBL.html'><li class='LeftSideIndex_Btn' id='ALT_TBL' name = 'ALT_TBL'>SQL Alter Table</li></a>
 <a href='/drop_TBL.html'><li class='LeftSideIndex_Btn' id='drop_TBL' name = 'drop_TBL'>SQL Drop Table</li></a>
 <a href='/drop_db.html'><li class='LeftSideIndex_Btn' id='drop_DB' name = 'drop_DB'>SQL Drop Database</li></a>
-<a href='/rename.html'><li class='LeftSideIndex_Btn' id='rename' name = 'rename'>SQL Rename</li></a>
-<a href='/truncate.html'><li class='LeftSideIndex_Btn' id='truncate' name = 'truncate'>SQL Truncate</li></a>
+<a href='/rename'><li class='LeftSideIndex_Btn' id='rename' name = 'rename'>SQL Rename</li></a>
+<a href='/truncate'><li class='LeftSideIndex_Btn' id='truncate' name = 'truncate'>SQL Truncate</li></a>
     </div>`;
 
 		const navigationbar = `
