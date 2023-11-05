@@ -76,22 +76,22 @@ $(document).ready(function() {
 		const listofitems = `
       <div id='listofitems'>
 <li class='LeftSideIndex_Btn_h' id='SQL BASICS' name = 'SQL BASICS'>SQL SQL BASICS</li>
-<a href='/index'><li class='LeftSideIndex_Btn' id='Intro' name = 'Intro'>SQL Intro</li></a>
-<a href='/pros&cons'><li class='LeftSideIndex_Btn' id='pros&cons' name = 'pros&cons'>SQL Pros & Cons</li></a>
-<a href='/comments'><li class='LeftSideIndex_Btn' id='comments' name = 'comments'>SQL Comments</li></a>
-<a href='/commands'><li class='LeftSideIndex_Btn' id='commands' name = 'commands'>SQL Commands</li></a>
-<a href='/case_sensitive'><li class='LeftSideIndex_Btn' id='case_sensitive' name = 'case sensitive'>SQL Case Sensitive</li></a>
-<a href='/bestpratices'><li class='LeftSideIndex_Btn' id='bestpratices' name = 'Best pratices'>SQL Best Pratices</li></a>
+<a href='/index.html'><li class='LeftSideIndex_Btn' id='Intro' name = 'Intro'>SQL Intro</li></a>
+<a href='/pros&cons.html'><li class='LeftSideIndex_Btn' id='pros&cons' name = 'pros&cons'>SQL Pros & Cons</li></a>
+<a href='/comments.html'><li class='LeftSideIndex_Btn' id='comments' name = 'comments'>SQL Comments</li></a>
+<a href='/commands.html'><li class='LeftSideIndex_Btn' id='commands' name = 'commands'>SQL Commands</li></a>
+<a href='/case_sensitive.html'><li class='LeftSideIndex_Btn' id='case_sensitive' name = 'case sensitive'>SQL Case Sensitive</li></a>
+<a href='/bestpratices.html'><li class='LeftSideIndex_Btn' id='bestpratices' name = 'Best pratices'>SQL Best Pratices</li></a>
 
 <li class='LeftSideIndex_Btn_h' id='SQL DDL' name = 'SQL DDL'>SQL SQL DDL</li>
-<a href='/create_DB'><li class='LeftSideIndex_Btn' id='create_DB' name = 'create_DB'>SQL Create Database</li></a>
-<a href='/create_TBL'><li class='LeftSideIndex_Btn' id='create_TBL' name = 'create_TBL'>SQL create TABLE</li></a>
-<a href='/ALT_DB'><li class='LeftSideIndex_Btn' id='ALT_DB' name = 'ALT_DB'>SQL Alter Database</li></a>
-<a href='/ALT_TBL'><li class='LeftSideIndex_Btn' id='ALT_TBL' name = 'ALT_TBL'>SQL Alter Table</li></a>
-<a href='/drop_TBL'><li class='LeftSideIndex_Btn' id='drop_TBL' name = 'drop_TBL'>SQL Drop Table</li></a>
-<a href='/drop_db'><li class='LeftSideIndex_Btn' id='drop_DB' name = 'drop_DB'>SQL Drop Database</li></a>
-<a href='/rename'><li class='LeftSideIndex_Btn' id='rename' name = 'rename'>SQL Rename</li></a>
-<a href='/truncate'><li class='LeftSideIndex_Btn' id='truncate' name = 'truncate'>SQL Truncate</li></a>
+<a href='/create_DB.html'><li class='LeftSideIndex_Btn' id='create_DB' name = 'create_DB'>SQL Create Database</li></a>
+<a href='/create_TBL.html'><li class='LeftSideIndex_Btn' id='create_TBL' name = 'create_TBL'>SQL create TABLE</li></a>
+<a href='/ALT_DB.html'><li class='LeftSideIndex_Btn' id='ALT_DB' name = 'ALT_DB'>SQL Alter Database</li></a>
+<a href='/ALT_TBL.html'><li class='LeftSideIndex_Btn' id='ALT_TBL' name = 'ALT_TBL'>SQL Alter Table</li></a>
+<a href='/drop_TBL.html'><li class='LeftSideIndex_Btn' id='drop_TBL' name = 'drop_TBL'>SQL Drop Table</li></a>
+<a href='/drop_DB.html'><li class='LeftSideIndex_Btn' id='drop_DB' name = 'drop_DB'>SQL Drop Database</li></a>
+<a href='/rename.html'><li class='LeftSideIndex_Btn' id='rename' name = 'rename'>SQL Rename</li></a>
+<a href='/truncate.html'><li class='LeftSideIndex_Btn' id='truncate' name = 'truncate'>SQL Truncate</li></a>
     </div>`;
 
 		const navigationbar = `
@@ -235,3 +235,14 @@ const footer = `
 
 //var getclass = document.getElementById("getclass").textContent;
 //document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loadingspinner");
+    const content = document.querySelector(".content");
+
+    // Hide the loader
+    loader.style.display = "none";
+
+    // Show the content
+    content.style.display = "block";
+});
