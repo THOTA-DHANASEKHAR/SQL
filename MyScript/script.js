@@ -241,7 +241,7 @@ window.addEventListener("load", () => {
     const content = document.querySelector(".content");
 
     // Hide the loader
-    loader.style.display = "none";
+    //loader.style.display = "none";
 
     // Show the content
     content.style.display = "block";
